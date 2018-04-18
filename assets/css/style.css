@@ -1,0 +1,107 @@
+:root{
+    --primary-bg:#FFEB3B; /*500 yellow*/
+    --secondary-bg:#FFF59D; /*200 yellow*/
+    --primary-font:#212121; /*900 grey*/
+    --secondary-font:#424242; /*800 grey*/
+    --error:#E53935; /*600 red*/
+    --success:#43A047;/*600 green*/
+    --warning:#FFB300;/*600 amber*/
+    --info:#1E88E5;/*600 blue*/
+}
+@font-face {
+    font-family: Malayalam-heading;
+    src: url(../fonts/malayalam-header-font.ttf);
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    margin: 0px !important;
+    padding: 0px;
+    font-size: 14px;
+    color: var(--primary-font);
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    display: block;
+}
+.header-block{
+    width: 100%;
+    height: 50px;
+    background-color:var(--primary-bg);
+}
+.header-block img{
+    margin: 0 auto;
+    display: block;
+}
+.news-slider{
+    border-bottom: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+    margin-top: 10px;
+    min-height: 30px;
+}
+.slide-block{
+    font-family: Malayalam-heading;
+    display: inline-block;
+    width:19%;
+    min-height: 30px;
+    margin-top: 2px;
+    border-right: 1px solid #dddddd;
+}
+.slide-block .slide-text{
+    display: block;
+    font-family: Malayalam-heading;
+    font-size: 16px;
+    letter-spacing: 3px;
+    line-height: 2;
+    text-align: center;
+}
+.slide-block.active{
+    background-color: var(--secondary-bg);
+}
+.news-container{
+    display: block;
+    padding: 5px;
+    overflow-y: scroll !important;
+}
+.news-container .news-block{
+    position: relative;
+    color: var(--secondary-font);
+    border: 1px solid var(--secondary-bg);
+    display: block;
+    width: 100%;
+    min-height: 100px;
+}
+.news-container .news-block .left-block,.news-container .news-block .right-block{
+    display: inline-block;
+}
+.news-container .news-block .left-block{
+    width:30%;
+}
+.news-container .news-block .right-block{
+    width:65%;
+    float: right;
+}
+@media screen and (min-width: 300px) {
+    .header-block{
+        height: 100px;
+    }
+    .header-block img{
+        width: 300px;
+        height: 80px;
+        padding-top: 10px;
+    }
+    .news-container .news-block .left-block,.news-container .news-block .right-block{
+        position: relative;
+        height: inherit;
+    }
+    .news-container .news-block .left-block img{
+        width: 60px;
+        height: 60px;
+        margin: 0 auto;
+        display: block;
+    }
+    .news-container .news-block .right-block h1{
+        font-size: 18px;
+        text-align: left;
+    }
+}
